@@ -35,7 +35,7 @@ struct ContentView: View {
                 HStack {
                     VStack(spacing: 6) {
                         Text("TUE")
-                            .font(.system(size: 25, weight: .medium))
+                            .font(.system(size: 16, weight: .medium))
                             .foregroundColor(.white)
                         
                         Image(systemName: "cloud.sun.rain.fill")
@@ -44,14 +44,14 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 50, height: 50)
                         
-                        Text("35°")
-                            .font(.system(size: 40, weight: .bold))
+                        Text("24°")
+                            .font(.system(size: 30, weight: .bold))
                             .foregroundColor(.white)
                     }
                     
                     VStack(spacing: 6) {
-                        Text("TUE")
-                            .font(.system(size: 25, weight: .medium))
+                        Text("WED")
+                            .font(.system(size: 16, weight: .medium))
                             .foregroundColor(.white)
                         
                         Image(systemName: "cloud.sun.rain.fill")
@@ -60,14 +60,14 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 50, height: 50)
                         
-                        Text("35°")
-                            .font(.system(size: 40, weight: .bold))
+                        Text("20°")
+                            .font(.system(size: 30, weight: .bold))
                             .foregroundColor(.white)
                     }
                     
                     VStack(spacing: 6) {
-                        Text("TUE")
-                            .font(.system(size: 25, weight: .medium))
+                        Text("THU")
+                            .font(.system(size: 16, weight: .medium))
                             .foregroundColor(.white)
                         
                         Image(systemName: "cloud.sun.rain.fill")
@@ -76,14 +76,14 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 50, height: 50)
                         
-                        Text("35°")
-                            .font(.system(size: 40, weight: .bold))
+                        Text("16°")
+                            .font(.system(size: 30, weight: .bold))
                             .foregroundColor(.white)
                     }
                     
                     VStack(spacing: 6) {
-                        Text("TUE")
-                            .font(.system(size: 25, weight: .medium))
+                        Text("FRI")
+                            .font(.system(size: 16, weight: .medium))
                             .foregroundColor(.white)
                         
                         Image(systemName: "cloud.sun.rain.fill")
@@ -92,10 +92,28 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 50, height: 50)
                         
-                        Text("35°")
-                            .font(.system(size: 40, weight: .bold))
+                        Text("31°")
+                            .font(.system(size: 30, weight: .bold))
                             .foregroundColor(.white)
                     }
+                    
+                    VStack(spacing: 6) {
+                        Text("SAT")
+                            .font(.system(size: 16, weight: .medium))
+                            .foregroundColor(.white)
+                        
+                        Image(systemName: "cloud.sun.rain.fill")
+                            .renderingMode(.original)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 50, height: 50)
+                        
+                        Text("27°")
+                            .font(.system(size: 30, weight: .bold))
+                            .foregroundColor(.white)
+                    }
+                    
+                    
                 }
                 
                 Spacer()
