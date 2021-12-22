@@ -31,6 +31,73 @@ struct ContentView: View {
                         .font(.system(size: 70, weight: .medium))
                         .foregroundColor(.white)
                 }
+                
+                HStack {
+                    VStack(spacing: 6) {
+                        Text("TUE")
+                            .font(.system(size: 25, weight: .medium))
+                            .foregroundColor(.white)
+                        
+                        Image(systemName: "cloud.sun.rain.fill")
+                            .renderingMode(.original)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 50, height: 50)
+                        
+                        Text("35°")
+                            .font(.system(size: 40, weight: .bold))
+                            .foregroundColor(.white)
+                    }
+                    
+                    VStack(spacing: 6) {
+                        Text("TUE")
+                            .font(.system(size: 25, weight: .medium))
+                            .foregroundColor(.white)
+                        
+                        Image(systemName: "cloud.sun.rain.fill")
+                            .renderingMode(.original)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 50, height: 50)
+                        
+                        Text("35°")
+                            .font(.system(size: 40, weight: .bold))
+                            .foregroundColor(.white)
+                    }
+                    
+                    VStack(spacing: 6) {
+                        Text("TUE")
+                            .font(.system(size: 25, weight: .medium))
+                            .foregroundColor(.white)
+                        
+                        Image(systemName: "cloud.sun.rain.fill")
+                            .renderingMode(.original)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 50, height: 50)
+                        
+                        Text("35°")
+                            .font(.system(size: 40, weight: .bold))
+                            .foregroundColor(.white)
+                    }
+                    
+                    VStack(spacing: 6) {
+                        Text("TUE")
+                            .font(.system(size: 25, weight: .medium))
+                            .foregroundColor(.white)
+                        
+                        Image(systemName: "cloud.sun.rain.fill")
+                            .renderingMode(.original)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 50, height: 50)
+                        
+                        Text("35°")
+                            .font(.system(size: 40, weight: .bold))
+                            .foregroundColor(.white)
+                    }
+                }
+                
                 Spacer()
             }
         }
