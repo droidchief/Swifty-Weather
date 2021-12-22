@@ -20,7 +20,7 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .padding()
                 
-                VStack(spacing: 7) {
+                VStack(spacing: 15) {
                     Image(systemName: "cloud.sun.rain.fill")
                         .renderingMode(.original)
                         .resizable()
