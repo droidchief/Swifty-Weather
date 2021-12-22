@@ -19,7 +19,7 @@ struct ContentView: View {
                 CityTextView(cityName: "Kano, NG")
                 
                 VStack(spacing: 15) {
-                    CurrentWeather(weatherIcon: "sun.max.fill", temperature: 35)
+                    CurrentWeather(weatherIcon: isDay ? "sun.max.fill" : "moon.stars.fill", temperature: isDay ? 35 : 24)
                 }
                 .padding(.bottom, 80)
                                 
