@@ -13,34 +13,23 @@ struct ContentView: View {
             BackgroundView(startColor: .blue, endColor: Color("lightBlue"))
             
             VStack {
-                Text("Kano, NG")
-                    .font(.system(size: 32, weight: .medium, design: .default))
-                    .foregroundColor(.white)
-                    .padding()
+                CityTextView(cityName: "Kano, NG")
                 
                 VStack(spacing: 15) {
-                    Image(systemName: "cloud.sun.rain.fill")
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 180, height: 180)
-                    
-                    Text("23°")
-                        .font(.system(size: 70, weight: .medium))
-                        .foregroundColor(.white)
+                    CurrentWeather(weatherIcon: "sun.max.fill", temperature: 35)
                 }
                 .padding(.bottom, 80)
                                 
                 HStack(spacing: 20) {
-                    DaysView(dayOftheWeek: "TUE", imageName: "cloud.sun.rain.fill", temperature: 24)
+                    DaysView(dayOftheWeek: "TUE", weatherIcon: "cloud.sun.rain.fill", temperature: 24)
                     
-                    DaysView(dayOftheWeek: "WED", imageName: "cloud.sun.rain.fill", temperature: 16)
+                    DaysView(dayOftheWeek: "WED", weatherIcon: "cloud.sun.rain.fill", temperature: 16)
                     
-                    DaysView(dayOftheWeek: "THU", imageName: "cloud.sun.rain.fill", temperature: 31)
+                    DaysView(dayOftheWeek: "THU", weatherIcon: "cloud.sun.rain.fill", temperature: 31)
                     
-                    DaysView(dayOftheWeek: "FRI", imageName: "cloud.sun.rain.fill", temperature: 27)
+                    DaysView(dayOftheWeek: "FRI", weatherIcon: "cloud.sun.rain.fill", temperature: 27)
                     
-                    DaysView(dayOftheWeek: "SAT", imageName: "cloud.sun.rain.fill", temperature: 24)
+                    DaysView(dayOftheWeek: "SAT", weatherIcon: "cloud.sun.rain.fill", temperature: 24)
                 }
                 
                 Spacer()
@@ -48,11 +37,7 @@ struct ContentView: View {
                 Button {
                     print("tapped")
                 } label: {
-                    Text("Change Day Time")
-                        .frame(width: 280, height: 50)
-                        .background(Color.white)
-                        .font(.system(size: 20, weight: .bold))
-                        .cornerRadius(10)
+                    PrimaryButton(buttonLabel: "Change Day Time", textColor: .blue, backgroundColor: .white, cornerRadius: 10)
                 }
                 
                 Spacer()
@@ -72,7 +57,7 @@ struct ContentView_Previews: PreviewProvider {
 struct DaysView: View {
     
     var dayOftheWeek: String
-    var imageName: String
+    var weatherIcon: String
     var temperature: Int
     
     var body: some View {
@@ -81,7 +66,7 @@ struct DaysView: View {
                 .font(.system(size: 16, weight: .medium))
                 .foregroundColor(.white)
             
-            Image(systemName: imageName)
+            Image(systemName: weatherIcon)
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -104,5 +89,50 @@ struct BackgroundView: View {
                        startPoint: .topLeading,
                        endPoint: .bottomTrailing)
             .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+    }
+}
+
+struct CityTextView: View {
+    
+    var cityName: String
+    
+    var body: some View {
+        Text(cityName)
+            .font(.system(size: 32, weight: .medium, design: .default))
+            .foregroundColor(.white)
+            .padding()
+    }
+}
+
+struct CurrentWeather: View {
+    var weatherIcon: String
+    var temperature: Int
+    
+    var body: some View {
+        Image(systemName: weatherIcon)
+            .renderingMode(.original)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 180, height: 180)
+        
+        Text("\(temperature)°")
+            .font(.system(size: 70, weight: .medium))
+            .foregroundColor(.white)
+    }
+}
+
+struct PrimaryButton: View {
+    var buttonLabel: String
+    var textColor: Color
+    var backgroundColor: Color
+    var cornerRadius: Int
+    
+    var body: some View {
+        Text(buttonLabel)
+            .frame(width: 280, height: 50)
+            .background(backgroundColor)
+            .foregroundColor(textColor)
+            .font(.system(size: 20, weight: .bold))
+            .cornerRadius(CGFloat(cornerRadius))
     }
 }
