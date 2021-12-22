@@ -10,10 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.blue, Color("lightBlue")]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            BackgroundView(startColor: .blue, endColor: Color("lightBlue"))
+            
             VStack {
                 Text("Kano, NG")
                     .font(.system(size: 32, weight: .medium, design: .default))
@@ -93,5 +91,18 @@ struct DaysView: View {
                 .font(.system(size: 30, weight: .bold))
                 .foregroundColor(.white)
         }
+    }
+}
+
+struct BackgroundView: View {
+    
+    var startColor: Color
+    var endColor: Color
+    
+    var body: some View {
+        LinearGradient(gradient: Gradient(colors: [startColor, endColor]),
+                       startPoint: .topLeading,
+                       endPoint: .bottomTrailing)
+            .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
 }
