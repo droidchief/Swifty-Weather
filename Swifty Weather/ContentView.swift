@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            BackgroundView(startColor: isDay ? .blue : .black, endColor: isDay ? Color("lightBlue") : .gray)
+            BackgroundView(isDay: $isDay )
             
             VStack {
                 CityTextView(cityName: "Kano, NG")
@@ -85,11 +85,10 @@ struct DaysView: View {
 
 struct BackgroundView: View {
     
-    var startColor: Color
-    var endColor: Color
+    @Binding var isDay: Bool
     
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [startColor, endColor]),
+        LinearGradient(gradient: Gradient(colors: [isDay ? .blue : .black, isDay ? Color("lightBlue") : .gray]),
                        startPoint: .topLeading,
                        endPoint: .bottomTrailing)
             .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
