@@ -32,7 +32,9 @@ struct ContentView: View {
                         .foregroundColor(.white)
                 }
                 
-                HStack {
+                Spacer()
+                
+                HStack(spacing: 20) {
                     DaysView(dayOftheWeek: "TUE", imageName: "cloud.sun.rain.fill", temperature: 24)
                     
                     DaysView(dayOftheWeek: "WED", imageName: "cloud.sun.rain.fill", temperature: 16)
