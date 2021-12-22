@@ -13,6 +13,7 @@
 		FA2BAC06276EDE6800B206AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA2BAC05276EDE6800B206AA /* Preview Assets.xcassets */; };
 		FA2BAC11276EDE6900B206AA /* Swifty_WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2BAC10276EDE6900B206AA /* Swifty_WeatherTests.swift */; };
 		FA2BAC1C276EDE6900B206AA /* Swifty_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2BAC1B276EDE6900B206AA /* Swifty_WeatherUITests.swift */; };
+		FA4021EB2772C9A5007106FC /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4021EA2772C9A5007106FC /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		FA2BAC17276EDE6900B206AA /* Swifty WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swifty WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2BAC1B276EDE6900B206AA /* Swifty_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swifty_WeatherUITests.swift; sourceTree = "<group>"; };
 		FA2BAC1D276EDE6900B206AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA4021EA2772C9A5007106FC /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				FA2BAC02276EDE6800B206AA /* Assets.xcassets */,
 				FA2BAC07276EDE6800B206AA /* Info.plist */,
 				FA2BAC04276EDE6800B206AA /* Preview Content */,
+				FA4021EA2772C9A5007106FC /* PrimaryButton.swift */,
 			);
 			path = "Swifty Weather";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4021EB2772C9A5007106FC /* PrimaryButton.swift in Sources */,
 				FA2BAC01276EDE6700B206AA /* ContentView.swift in Sources */,
 				FA2BABFF276EDE6700B206AA /* Swifty_WeatherApp.swift in Sources */,
 			);

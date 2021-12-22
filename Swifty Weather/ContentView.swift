@@ -120,19 +120,3 @@ struct CurrentWeather: View {
             .foregroundColor(.white)
     }
 }
-
-struct PrimaryButton: View {
-    var buttonLabel: String
-    var textColor: Color
-    var backgroundColor: Color
-    var cornerRadius: Int
-    
-    var body: some View {
-        Text(buttonLabel)
-            .frame(width: 280, height: 50)
-            .background(backgroundColor)
-            .foregroundColor(textColor)
-            .font(.system(size: 20, weight: .bold))
-            .cornerRadius(CGFloat(cornerRadius))
-    }
-}
