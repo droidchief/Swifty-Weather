@@ -31,9 +31,8 @@ struct ContentView: View {
                         .font(.system(size: 70, weight: .medium))
                         .foregroundColor(.white)
                 }
-                
-                Spacer( )
-                
+                .padding(.bottom, 80)
+                                
                 HStack(spacing: 20) {
                     DaysView(dayOftheWeek: "TUE", imageName: "cloud.sun.rain.fill", temperature: 24)
                     
